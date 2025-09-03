@@ -1,15 +1,13 @@
 const mysql = require("mysql2");
 
-// ✅ Create MySQL connection
 const db = mysql.createConnection({
-  host: "localhost",     // since you’re running locally
-  user: "root",          // default MySQL user
-  password: "Vamsi@1234", // your password
-  database: "schooldb",   // we will create this DB
-  port: 3306             // default MySQL port
+  host: "localhost",     
+  user: "root",          
+  password: "Vamsi@1234", 
+  database: "schooldb",   
+  port: 3306             
 });
 
-// ✅ Connect to MySQL
 db.connect((err) => {
   if (err) {
     console.error("❌ MySQL Connection Failed: ", err);
